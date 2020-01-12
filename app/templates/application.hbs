@@ -1,5 +1,31 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="container">
+  <BsNav
+    @type="pills"
+    @justified={{false}}
+    @stacked={{false}}
+    @fill={{false}} as |nav|
+  >
+    <nav.item>
+      <nav.link-to @route="index">Library App</nav.link-to>
+    </nav.item>
+    <nav.dropdown as |dd|>
+      <dd.toggle>
+        Toggle Navigation
+        <span class="caret"></span>
+      </dd.toggle>
+      <dd.menu as |ddm|>
+        <ddm.item>
+          <ddm.link-to @route="index">Home</ddm.link-to>
+        </ddm.item>
+        <ddm.item>
+          <ddm.link-to @route="about">About</ddm.link-to>
+        </ddm.item>
+        <ddm.item>
+          <ddm.link-to @route="contact">Contact</ddm.link-to>
+        </ddm.item>
+      </dd.menu>
+    </nav.dropdown>
+  </BsNav>
 
-{{outlet}}
+  {{outlet}}
+</div>
