@@ -1,0 +1,15 @@
+<h1>Libraries</h1>
+
+<div class="well">
+    <BsNav @type="pills" @justified={{false}} @stacked={{false}} @fill={{false}} as |nav|>
+        <nav.item>
+            <nav.link-to @route="libraries.index">List all</nav.link-to>
+        </nav.item>
+        <nav.item>
+            <nav.link-to @route="libraries.new">Add new</nav.link-to>
+        </nav.item>
+
+    </BsNav>
+</div>
+
+{{outlet}}
