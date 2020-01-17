@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import RESTSerializer from '@ember-data/serializer/rest';
 
 export default Route.extend({
   model() {
